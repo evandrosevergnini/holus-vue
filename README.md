@@ -9,7 +9,7 @@ yarn add holus-vue
 ```
 Then import Holus as a plugin
 ```
-import HolusVue from "holus-vue/dist/holus-vue.common.js";
+import HolusVue from "holus-vue";
 import "holus-vue/dist/holus-vue.css";
 Vue.use(HolusVue);
 ```
