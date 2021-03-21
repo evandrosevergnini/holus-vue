@@ -1,8 +1,8 @@
 {
   "name": "holus-vue",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
-  "main" : ".dist/holus-vue.common.js",
+  "main" : "./dist/holus-vue.common.js",
   "files": ["dist/*"],
   "description": "Library of accessible components for creating web applications, developed with the Vue.js framework",
   "author": {
