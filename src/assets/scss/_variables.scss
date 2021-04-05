@@ -1,3 +1,26 @@
 :root {
+  --h-back: black;
+  --h-front: white;
+  --h-primary-back: lightgreen;
+  --h-primary-front: var(--h-front);
+  --h-secondary-back: lightblue;
+  --h-secondary-front: var(--h-front);
+  --h-tertiary-back: rgb(238, 144, 144);
+  --h-tertiary-front: var(--h-front);
+  --h-quaternary-back: var(--h-front);
+  --h-quaternary-front: var(--h-front);
+  --h-success-back: rgb(0, 191, 255);
+  --h-success-front: var(-h-front);
+  --h-info-back: rgb(0, 38, 51);
+  --h-info-front: var(--h-front);
+  --h-alert-back: rgb(0, 38, 51);
+  --h-alert-front: var(--h-front);
+  --h-error-back: rgb(253, 120, 120);
+  --h-error-front: var(--h-front);
+  --h-spacing-small: 0.5rem;
   --h-spacing-normal: 1rem;
+  --h-spacing-large: 1.5rem;
+  --h-form-item-small: 2rem;
+  --h-form-item-normal: 3rem;
+  --h-form-item-large: 4rem;
 }

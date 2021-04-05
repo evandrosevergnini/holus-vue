@@ -1,0 +1,45 @@
+.holus-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1ch;
+  min-width: var(--h-form-item-normal);
+  min-height: var(--h-form-item-normal);
+  padding: 0.5ch 1ch;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 1px hsla(0, 0%, 0%, 0.3);
+  outline: none;
+  transition: all 0.3 ease !important;
+  &:focus {
+    box-shadow: 0 0 4px 2px hsla(0, 0%, 0%, 0.3);
+    transition: all 0.3 ease !important;
+  }
+  &--small {
+    min-width: var(--h-form-item-small);
+    min-height: var(--h-form-item-small);
+    font-size: 0.875rem;
+  }
+  &--large {
+    min-width: var(--h-form-item-large);
+    min-height: var(--h-form-item-large);
+    font-size: 1.125rem;
+  }
+  &--rounded {
+    border-radius: calc(var(--h-form-item-normal)/2);
+  }
+  &--rounded+&--small {
+    border-radius: calc(var(--h-form-item-small)/2);
+  }
+  &--rounded+&--large {
+    border-radius: calc(var(--h-form-item-large)/2);
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+  &--column-reverse {
+    flex-direction: column-reverse;
+  }
+}

@@ -15,7 +15,7 @@
     "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build": "vue-cli-service build --target lib --name holus-vue ./src/components/index.js",
-    "button": "vue serve ./src/components/HolusButton.vue"
+    "button": "vue serve ./src/pages/HolusButtonPage.vue"
   },
   "dependencies": {
     "core-js": "^3.6.5",
