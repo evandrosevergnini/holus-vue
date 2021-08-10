@@ -107,3 +107,16 @@ dist
 .vscode/
 
 accordion/
+affix/
+alert/
+badge/
+breadcrumb/
+heading/
+list/
+message/
+pagination/
+popover/
+toggle/
+tooltip/
+pages/
+tests/

@@ -1,20 +1,18 @@
-import HolusButton from '@/components/button/HolusButton.vue'
 import '@/assets/scss/main.scss'
-const HolusVue = {
+
+import HolusButton from '@/components/button/HolusButton.vue'
+
+export default {
   install(Vue, options) {
     let prefix = ''
     if (options && 'prefix' in options) {
-      prefix = `${options.prefix}-`
+      prefix = `${options.prefix}`
+      prefix = prefix.charAt(0).toUpperCase() + prefix.slice(1)
     } else {
-      prefix = `holus-`
+      prefix = `Holus`
     }
-    Vue.component(`${prefix}button`, HolusButton)
+    Vue.component(`${prefix}Button`, HolusButton)
   },
 }
 
-// Automatic installation if Vue has been added to the global scope.
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(HolusVue)
-}
-
-export default HolusVue
+export { HolusButton }

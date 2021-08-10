@@ -1,0 +1,19 @@
+.holus-flex {
+  display: inline-flex;
+  gap: 1ch;
+  &--row-reverse {
+    flex-direction: row;
+  }
+  &--row-reverse {
+    flex-direction: row-reverse;
+  }
+  &--column {
+    flex-direction: column;
+  }
+  &--column-reverse {
+    flex-direction: column-reverse;
+  }
+  &--wrap {
+    flex-wrap: wrap;
+  }
+}

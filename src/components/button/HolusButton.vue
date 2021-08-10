@@ -1,18 +1,31 @@
+<template>
+  <button
+    class="holus-button"
+    :class="classes"
+    :type="c_type"
+    v-on="$listeners"
+    :aria-label="ariaLabel"
+  >
+    <slot>{{ ariaLabel }}</slot>
+  </button>
+</template>
+
 <script>
 import '@/assets/scss/main.scss'
 export default {
   name: 'HolusButton',
   props: {
-    label: {
+    ariaLabel: {
       type: String,
       required: true,
       validator: (prop) => prop.length > 0,
     },
-    type: {
-      type: String,
-      validator: (prop) => ['submit', 'button', 'image'].includes(prop),
-    },
     block: Boolean,
+    color: {
+      type: String,
+      // prettier-ignore
+      validator: (prop) => ['default', 'primary', 'success', 'info', 'alert', 'error'].includes(prop),
+    },
     direction: {
       type: String,
       validator: (prop) =>
@@ -25,6 +38,10 @@ export default {
       default: 'normal',
       validator: (prop) => ['small', 'normal', 'large'].includes(prop),
     },
+    type: {
+      type: String,
+      validator: (prop) => ['submit', 'button', 'reset'].includes(prop),
+    },
     uppercase: Boolean,
   },
   data() {
@@ -33,17 +50,15 @@ export default {
     }
   },
   computed: {
-    listeners() {
-      return Object.assign({}, this.$listeners, {})
-    },
     classes() {
       return {
         'holus-button--block': this.block,
+        [`holus-button--${this.color}`]: !!this.color,
+        [`holus-button--${this.direction}`]: !!this.direction,
         'holus-button--outline': this.outline,
         'holus-button--rounded': this.rounded,
+        [`holus-button--${this.size}`]: !!this.size && this.size !== 'normal',
         'holus-button--uppercase': this.uppercase,
-        [`holus-button--${this.size}`]: !!this.size,
-        [`holus-button--${this.direction}`]: !!this.direction,
       }
     },
   },
@@ -75,18 +90,6 @@ export default {
   },
 }
 </script>
-
-<template>
-  <button
-    class="holus-button"
-    :class="classes"
-    :type="c_type"
-    v-on="listeners"
-    :aria-label="label"
-  >
-    <slot>{{ label }}</slot>
-  </button>
-</template>
 
 <style lang="scss" scoped>
 @import './HolusButton';
